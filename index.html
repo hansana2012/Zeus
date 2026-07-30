@@ -15,6 +15,11 @@
 
 <body>
     <nav class="nav">
+        <!-- මෙම පේළිය UL එකට කලින් අලවන්න -->
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
         <ul>
             <a class="links" href="#">Home</a>
             <a class="links" href="#">Features</a>
@@ -35,7 +40,9 @@
         <p class="subtext">"Connecting you with verified, compassionate caregivers who treat your family like their
             own."</p>
         <div class="getstdiv">
+        <a href="login.html">
             <button class="getst">Get Started!</button>
+</a>
         </div>
     </div>
 
@@ -258,6 +265,24 @@
                 nav.classList.remove('nav-scrolled');
             }
         });
+        // Mobile Menu Toggle Script
+const menuToggle = document.getElementById('mobile-menu');
+const navUl = document.querySelector('.nav ul');
+
+menuToggle.addEventListener('click', () => {
+    // Toggle the 'active' class on the ul
+    navUl.classList.toggle('active');
+    
+    // Change icon between Bars (hamburger) and X (close)
+    const icon = menuToggle.querySelector('i');
+    if (navUl.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times'); // X icon
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars'); // Hamburger icon
+    }
+});
     </script>
 </body>
 

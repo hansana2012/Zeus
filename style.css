@@ -791,3 +791,428 @@ text-decoration:none;
 color:white
 
 }
+/* =========================================
+   ALL DEVICES RESPONSIVE CSS (Mobile, Tablet, Desktop)
+   ========================================= */
+
+/* Tablet & Small Laptop (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .nav {
+        padding: 15px 20px;
+    }
+    .links {
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .login {
+        margin-left: 50px;
+        width: 100px;
+    }
+    .firstdiv {
+        width: 100%;
+        margin: 100px 0 0 20px;
+        flex-direction: column;
+    }
+    .find {
+        font-size: 50px;
+    }
+    .heroimg {
+        width: 400px;
+        margin: 30px auto 0;
+        position: static;
+        display: block;
+    }
+    .subtextdiv {
+        width: 90%;
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .heropaddings1, .heropaddings2 {
+        display: none; /* Hide decorative padding on tablets */
+    }
+    .amazingfeatures {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        position: static;
+        margin: 30px auto;
+    }
+    .featsec1, .featsec2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .f1, .f2, .f3, .f4, .f5, .f6 {
+        margin: 0;
+        width: 160px;
+        height: 120px;
+    }
+    .aboutus {
+        width: 90%;
+        padding: 15px;
+        position: static;
+        margin: 30px auto;
+    }
+    .zeusa {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .seens {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .seen1, .seen2, .seen3 {
+        width: 120px;
+        height: auto;
+        padding: 15px;
+    }
+    .misandvis {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mission, .vision {
+        width: 100%;
+        min-height: auto;
+    }
+    .gallery {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        position: static;
+        margin: 30px auto;
+    }
+    .allwebs {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .align {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    .rextro {
+        width: 160px;
+        height: 120px;
+    }
+    .reviewbox {
+        width: 90%;
+        height: 400px;
+    }
+    .packagebox {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    .divla {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .freediv {
+        width: 280px;
+        height: auto;
+    }
+    .contacts-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-form-box {
+        padding: 30px;
+    }
+    .ftin {
+        width: 90%;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 15px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .links {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+    .login {
+        margin: 0;
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+    }
+    .firstdiv {
+        margin: 80px 10px 0;
+        text-align: center;
+    }
+    .find {
+        font-size: 36px;
+        text-align: center;
+    }
+    .heroimg {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto;
+        display: block;
+    }
+    .subtextdiv {
+        width: 95%;
+        margin: 10px auto;
+    }
+    .subtext {
+        font-size: 14px;
+    }
+    .amazingfeatures {
+        width: 95%;
+        padding: 15px;
+    }
+    .header1 {
+        font-size: 24px;
+    }
+    .f1, .f2, .f3, .f4, .f5, .f6 {
+        width: 140px;
+        height: 100px;
+        margin: 5px;
+    }
+    .featsec1, .featsec2 {
+        gap: 10px;
+    }
+    .aboutus {
+        width: 95%;
+        padding: 10px;
+    }
+    .abouttxt {
+        font-size: 24px;
+    }
+    .seens {
+        flex-direction: column;
+        align-items: center;
+    }
+    .seen1, .seen2, .seen3 {
+        width: 80%;
+        text-align: center;
+    }
+    .mission, .vision {
+        width: 95%;
+        padding: 15px;
+    }
+    .gallery {
+        width: 95%;
+        padding: 15px;
+    }
+    .allwebs {
+        padding: 15px;
+    }
+    .rextro {
+        width: 140px;
+        height: 100px;
+    }
+    .rtxt {
+        font-size: 18px;
+    }
+    .reviewbox {
+        width: 95%;
+        height: 300px;
+    }
+    .packagebox {
+        width: 95%;
+        padding: 15px;
+    }
+    .divla {
+        flex-direction: column;
+        align-items: center;
+    }
+    .freediv {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+    .plans {
+        font-size: 24px;
+    }
+    .contacts-container {
+        padding: 30px 15px;
+        margin-bottom: 40px;
+    }
+    .contact-form-box {
+        padding: 20px;
+    }
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .btn-submit {
+        padding: 12px;
+    }
+    .fttr {
+        padding: 20px 0;
+    }
+    .ftin {
+        width: 95%;
+    }
+    .ftcr {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .find {
+        font-size: 28px;
+    }
+    .links {
+        font-size: 10px;
+        margin: 0 5px;
+    }
+    .login {
+        width: 70px;
+        height: 22px;
+        font-size: 10px;
+    }
+    .f1, .f2, .f3, .f4, .f5, .f6 {
+        width: 100px;
+        height: 80px;
+    }
+    .amazingfeatures {
+        padding: 10px;
+    }
+    .aboutre {
+        font-size: 13px;
+    }
+    .mission, .vision {
+        width: 100%;
+        padding: 10px;
+    }
+    .mvis {
+        font-size: 20px;
+    }
+    .mdesc {
+        font-size: 13px;
+    }
+    .rextro {
+        width: 120px;
+        height: 90px;
+    }
+    .packagebox {
+        padding: 10px;
+    }
+    .freediv {
+        padding: 10px;
+    }
+    .doller {
+        font-size: 28px;
+    }
+    .pitem {
+        font-size: 12px;
+    }
+    .contact-form-box h3 {
+        font-size: 1.2rem;
+    }
+}
+/* --- Mobile Menu Toggle Button --- */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    z-index: 1001;
+}
+
+/* Navbar UL Default */
+.nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* Mobile & Tablet Styles */
+@media (max-width: 1024px) {
+    .nav {
+        position: fixed;
+        width: 100%;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        background: rgba(18, 12, 26, 0.95); /* Dark background for mobile */
+        backdrop-filter: blur(5px);
+        height: auto;
+        min-height: 60px;
+    }
+    
+    /* Show Menu Icon */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide UL by default on mobile */
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(18, 12, 26, 0.98);
+        padding: 60px 0 20px 0;
+        margin-top: 10px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    /* When menu is active (via JS) */
+    .nav ul.active {
+        display: flex;
+    }
+
+    /* Style Links for Mobile */
+    .nav ul .links {
+        margin: 10px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Login Button for Mobile */
+    .nav ul .login {
+        margin: 15px auto 0;
+        width: 120px;
+        height: 35px;
+        display: block;
+    }
+}
