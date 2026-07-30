@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Zeus - Login & Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="lcnt">
+        <div class="lbox">
+            <!-- Tabs -->
+            <div class="ltab">
+                <button id="tlog" class="tbtn actv">Login</button>
+                <button id="treg" class="tbtn">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="flog" class="form">
+                <h2 class="titl">Welcome Back</h2>
+                <div class="fgrp">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="email" id="leml" class="inpt" placeholder="Email Address" required>
+                </div>
+                <div class="fgrp">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" id="lpwd" class="inpt" placeholder="Password" required>
+                </div>
+                <button type="submit" class="sbtn">LOGIN</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="freg" class="form hidn">
+                <h2 class="titl">Create Account</h2>
+                <div class="fgrp">
+                    <i class="fa-solid fa-user icon"></i>
+                    <input type="text" id="rnam" class="inpt" placeholder="Full Name" required>
+                </div>
+                <div class="fgrp">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="email" id="reml" class="inpt" placeholder="Email Address" required>
+                </div>
+                <div class="fgrp">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" id="rpwd" class="inpt" placeholder="Password" required>
+                </div>
+                <div class="fgrp">
+                    <i class="fa-solid fa-user-gear icon"></i>
+                    <select id="rrol" class="inpt slct">
+                        <option value="parent">Parent / Customer</option>
+                        <option value="caregiver">Caregiver / Babysitter</option>
+                    </select>
+                </div>
+                <button type="submit" class="sbtn">REGISTER</button>
+            </form>
+
+            <div class="orline"><span>OR</span></div>
+
+            <!-- Social Logins -->
+            <div class="socl">
+                <button type="button" id="gbtn" class="gbtn">
+                    <i class="fa-brands fa-google"></i> Continue with Google
+                </button>
+                <button type="button" id="abtn" class="abtn">
+                    <i class="fa-brands fa-apple"></i> Continue with Apple
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script link -->
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<!-- ඔයාගේ Script එක -->
+<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,793 @@
+/* 1. Gradient Angle Eka Rotate Karaganna Definition Eka */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+body{
+    background: linear-gradient( to right,rgb(26, 0, 26),black);
+}
+.nav{
+    background-color: #aca7a7;
+    height: 50px;
+   padding-top: 1px;
+   border-radius: 15px;
+   background: none;
+   position: fixed;
+   top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px; 
+  transition: all 0.3s ease-in-out; 
+  z-index: 1000; 
+  background: transparent;
+}
+.nav-scrolled {
+  background-color: rgba(18, 12, 26, 0.85); 
+  backdrop-filter: blur(10px); 
+  padding: 15px 50px; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
+}
+.links{
+    text-decoration: none;
+    color: rgb(247, 245, 245);
+    margin-left: 100px;
+font-weight: bold;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+   background: linear-gradient( to right,rgb(252, 86, 252),rgb(147, 88, 243));
+    margin-left: 230px;
+    padding-bottom: 2px;
+    border: none;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.firstdiv{
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.find{
+        font-size: 80px;
+    font-weight: bolder;
+     background: linear-gradient( to right,rgb(252, 86, 252),rgb(147, 88, 243));
+     -webkit-background-clip:text;
+     -webkit-text-fill-color: transparent;
+      font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+}
+.heroimg{
+    width: 600px;
+    margin-left: 700px;
+    position: relative;
+    bottom: 500px;
+}
+.subtext{
+      font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color: white;
+}
+.subtextdiv{
+    width: 350px;
+    position: relative;
+    bottom: 450px;
+    margin-left: 50px;
+}
+.getst{
+    width: 150px;
+    height: 40px;
+background: linear-gradient( to right,rgb(252, 86, 252),rgb(147, 88, 243));
+border-radius: 15px;
+color: white;
+font-weight: bold;
+border: none;
+cursor: pointer;
+}
+.getstdiv{
+    margin-top: 20px;
+}
+.padi1{
+    padding: 20px;
+    width: 130px;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 20px;
+  background:linear-gradient(to right,rgb(134, 240, 231),rgb(118, 218, 243),rgb(114, 114, 238));
+        margin-right: 50px;
+}
+.padi2{
+    padding: 20px;
+    width: 130px;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 20px;
+    border-color: rgb(255, 122, 233);
+        margin-right: 50px;
+        background:linear-gradient(to right,rgb(134, 240, 231),rgb(118, 218, 243),rgb(114, 114, 238));
+}
+
+.padi3{
+    padding: 20px;
+    width: 130px;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 20px;
+    border-color: rgb(255, 122, 233);
+    margin-right: 50px;
+background:linear-gradient(to right,rgb(134, 240, 231),rgb(118, 218, 243),rgb(114, 114, 238));
+}
+.padi4{
+    padding: 20px;
+    width: 130px;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 20px;
+    border-color: rgb(255, 122, 233);
+    margin-right: 50px;
+    background:linear-gradient(to right,rgb(134, 240, 231),rgb(118, 218, 243),rgb(114, 114, 238));
+}
+.heropaddings1{
+    display: flex;
+    flex-direction: row;
+place-self: center;
+position: relative;
+bottom:400px;
+}
+.heropaddings2{
+    display: flex;
+    flex-direction: row;
+place-self: center;
+position: relative;
+bottom:350px;
+}
+
+/* --- Amazing Features Loku Box Eka (Rotating Gradient Border) --- */
+.amazingfeatures{
+    width: 1000px;
+    height: 600px;
+    color: #ffffff;
+    
+    padding: 30px 40px; 
+    border-radius: 20px;
+    border: 4px solid transparent; 
+
+    /* Dynamic Rotating Linear Gradient Background */
+    background: 
+      linear-gradient(#0e151c, #070707) padding-box, 
+      linear-gradient(var(--angle), #e35df5, rgb(147, 88, 243), rgb(0, 212, 255),#e35df5) border-box;
+
+    /* Animation Eka Apply Kireema */
+    animation: rotateBorder 4s linear infinite;
+
+    place-self: center;
+    position: relative;
+    bottom:200px;
+}
+
+/* Border Rotating Animation Keyframes */
+@keyframes rotateBorder {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.header1{
+     font-family: "Bruno-Ace", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+  place-self: center;
+}
+
+.f1{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+    margin-left:50px;
+
+    background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+.f2{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+  background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+.f3{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+  background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+.f4{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+  background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+.f5{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+      background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+.f6{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 50px;
+  background: 
+      linear-gradient(#4ed5ec, #6a73f8) 
+}
+
+.featsec1{
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+}
+.featsec2{
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+    margin-top: 50px;
+    
+}
+.aboutus{
+    padding: 20px;
+    width: 1050px;
+    height: auto;
+    border-radius: 20px;
+    place-self: center;
+    position: relative;
+    bottom:200px;
+    margin-top: 50px;
+}
+.abouttxt{
+      font-family: "Bruno-Ace", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+  place-self: center;
+}
+.zeusa{
+    padding: 20px;
+    width: 900px;
+place-self: center;
+margin-left: 200px;
+}
+.aboutre{
+          font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:whitesmoke
+}
+.seen1{
+    padding: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+.seen2{
+    padding: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+.seen3{
+    padding: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+.seens{
+    place-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.tenk{
+color: #4356cE;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:bolder;
+  place-self: center;
+  position: relative;
+  bottom: 25px;
+}
+.actu{
+    color: #2e2e30;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:bolder;
+  place-self: center;
+  position: relative;
+  bottom: 20px;
+}
+.hr{
+    margin-top: 40px;
+    border-color: #db5eec;
+}
+.developers{
+    place-self: center;
+          font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color: white;
+}
+.dev1{
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    background: 
+      linear-gradient(#0a020a, #070707) padding-box, 
+      linear-gradient(var(--angle), rgb(252, 86, 252), rgb(147, 88, 243), rgb(0, 212, 255), rgb(252, 86, 252)) border-box;
+       border: 4px solid transparent; 
+    border-radius: 20px;
+    place-self: center;
+    margin-top: 60px;
+}
+.mask1{
+    width: 100px;
+    height: 130px;
+    place-self: center;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.divm1{
+    place-self: center;
+}
+.subdiv{
+    place-self: center;
+}
+.p1{
+      font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bolder;
+  place-self: center;
+  color: white;
+}
+.p2{
+      font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bolder;
+  place-self: center;
+  font-size: 10px;
+  color: white;
+}
+.gallery{
+     width: 1000px;
+    height: 600px;
+    color: #ffffff;
+    
+    padding: 30px 40px; 
+    border-radius: 20px;
+    border: 4px solid transparent; 
+
+    /* Dynamic Rotating Linear Gradient Background */
+
+    /* Animation Eka Apply Kireema */
+    animation: rotateBorder 4s linear infinite;
+
+    place-self: center;
+    position: relative;
+margin-top: 50px;
+}
+.misttxt{
+          font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:  rgb(39, 37, 37);
+    margin: 0;
+}
+.misandvis{
+    place-self: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
+.mission{
+    padding: 30px 25px;
+    width: 420px;
+    min-height: 220px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(235, 122, 233, 0.2);
+    box-sizing: border-box;
+}
+.vision{
+    padding: 30px 25px;
+    width: 420px;
+    min-height: 220px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(118, 218, 243, 0.2);
+    box-sizing: border-box;
+}
+.visttxt{
+          font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color: rgb(39, 37, 37);
+    margin: 0;
+}
+
+/* --- New Short Classes (Max 4 chars) for Mission/Vision --- */
+.vsec{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.mvis{
+    font-size: 28px;
+    color: #9358f3;
+}
+.mdesc{
+    font-family: "Roboto", sans-serif;
+    color: #4a4a4a;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.allwebs{
+    padding: 20px;
+    width: 1050px;
+    height: 400px;
+     background: 
+      linear-gradient(#0e151c, #070707) padding-box, 
+      linear-gradient(var(--angle), #e35df5, rgb(147, 88, 243), rgb(162, 0, 255),#e35df5) border-box;
+    place-self: center;
+    border-radius: 20px;
+       border: 4px solid transparent; 
+}
+.rextro{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #46474d;
+    cursor:pointer;
+}
+.rtxt{
+              font-family: "Bruno Ace", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:  rgb(238, 236, 236);
+    place-self: center;
+}
+.align{
+    place-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 100px;
+    
+}
+.likka{
+text-decoration:none;
+}
+.revtxt{
+              font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:  rgb(255, 255, 255);
+    place-self: center;
+    margin-top: 50px;
+}
+.reviewbox{  
+     padding: 20px;
+    width: 1050px;
+    height: 600px;
+     background: 
+      linear-gradient(#0e151c, #070707) padding-box, 
+      linear-gradient(var(--angle), #e6f55d, rgb(233, 243, 88), rgb(162, 0, 255),#e35df5) border-box;
+    place-self: center;
+    border-radius: 20px;
+       border: 4px solid transparent; 
+           animation: rotateBorder 4s linear infinite;
+}
+.packagebox{
+    padding: 20px;
+    width: 1000px;
+    height: 570px;
+    background-color: rgb(23, 23, 26); 
+    place-self: center;
+    border-radius: 20px;
+    border: 4px solid transparent; 
+    animation: rotateBorder 4s linear infinite;
+    margin-top: 70px;
+}
+.plans{
+                  font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:  rgb(255, 255, 255);
+    place-self: center;
+    margin-top: 30px;
+}
+.freediv{
+    padding: 20px;
+    width: 300px;
+    height: 430px;
+    background-color:rgba(245, 242, 245, 0.6);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.divla{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.ftxt{
+    place-self: center;
+    color: black;
+                      font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    margin: 5px 0;
+}
+.doller{
+        place-self: center;
+    color: rgb(51, 49, 49);
+                      font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    font-size: 36px;
+    margin: 5px 0 15px 0;
+}
+
+/* --- New Short Classes (Max 4 chars) for Pricing Features --- */
+.plist{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.pitem{
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.flic{
+    margin-right: 10px;
+    font-size: 14px;
+}
+.okic{
+    color: #10b981;
+}
+.noic{
+    color: #ef4444;
+}
+
+.subscribe{
+    background-color: black;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+}
+.subbtdiv{
+    place-self: center;
+    margin-top: 10px;
+}
+.contacts-container {
+    background-color: var(--bg-section);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.contacts-container > h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contacts-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #4b7bec;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-item h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #d1d1d1;
+    font-size: 0.95rem;
+}
+
+.contact-form-box {
+    flex: 2;
+    background-color: #3b3d36;
+    padding: 50px;
+    border-radius: 15px;
+
+}
+
+.contact-form-box h3 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color:white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    background-color: #1e201b;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: white;
+    font-family: var(--font-body);
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #555b46;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #6a7158;
+}
+.contacta{
+                      font-family: "AR One Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style : normal;
+  font-variation-settings:
+    "ARRR" 10;
+    color:  rgb(255, 255, 255);
+}
+
+/* --- New Short Classes (Max 4 chars) for Footer --- */
+.fttr{
+    width: 100%;
+    background-color: #0c0814;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(227, 93, 245, 0.2);
+}
+.ftin{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ftcr{
+    color: #a0a0a0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+.ftsc{
+    display: flex;
+    gap: 15px;
+}
+.ftlk{
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.ftlk:hover{
+    color: #e35df5;
+}
+.emaila{
+color:white
+
+}

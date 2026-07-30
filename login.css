@@ -1,0 +1,192 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, rgb(26, 0, 26), black);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lcnt {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lbox {
+    background: 
+      linear-gradient(#0e151c, #070707) padding-box, 
+      linear-gradient(var(--angle), #e35df5, rgb(147, 88, 243), rgb(0, 212, 255), #e35df5) border-box;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    padding: 30px 25px;
+    animation: rotateBorder 4s linear infinite;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@keyframes rotateBorder {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.ltab {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.tbtn {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    padding: 10px;
+    font-family: 'Bruno Ace', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tbtn.actv {
+    background: linear-gradient(to right, rgb(252, 86, 252), rgb(147, 88, 243));
+    color: white;
+}
+
+.titl {
+    color: white;
+    font-family: 'Bruno Ace', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidn {
+    display: none !important;
+}
+
+.fgrp {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.inpt {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.inpt:focus {
+    border-color: #e35df5;
+}
+
+.slct {
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.slct option {
+    background: #0e151c;
+    color: white;
+}
+
+.sbtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(252, 86, 252), rgb(147, 88, 243));
+    color: white;
+    font-weight: bold;
+    font-family: 'Bruno Ace', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.sbtn:hover {
+    transform: translateY(-2px);
+}
+
+.orline {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 0.1em;
+    margin: 25px 0 20px;
+}
+
+.orline span {
+    background: #090a0f;
+    color: #a0a0a0;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.socl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gbtn, .abtn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+.gbtn:hover, .abtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .lcnt {
+        padding: 15px;
+    }
+    .lbox {
+        padding: 20px 15px;
+    }
+}
