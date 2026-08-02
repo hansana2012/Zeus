@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus - Caregiver Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="caregiver.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Simple Top Bar -->
+        <div class="top-bar">
+            <div class="brand"><i class="fa-solid fa-crown"></i> Zeus</div>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-img-wrap" onclick="document.getElementById('profileUpload').click()">
+                <img id="profileImage" src="https://ui-avatars.com/api/?name=Caregiver&background=random" alt="Profile">
+                <div class="upload-hint"><i class="fa-solid fa-camera"></i> Upload</div>
+                <input type="file" id="profileUpload" accept="image/*" style="display:none">
+            </div>
+            <div class="profile-name" id="caregiverName">Caregiver</div>
+            <div class="profile-role" id="caregiverRole">Babysitter</div>
+            <div class="status-badge pending" id="statusBadge">Pending</div>
+        </div>
+
+        <!-- Alert -->
+        <div class="alert-box" id="profileAlert">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Please complete your profile to get approved</span>
+            <button class="btn-complete" onclick="scrollToForm()">Complete Now</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box"><i class="fa-solid fa-users"></i><h3>0</h3><p>Jobs</p></div>
+            <div class="stat-box"><i class="fa-solid fa-star"></i><h3>0.0</h3><p>Rating</p></div>
+            <div class="stat-box"><i class="fa-solid fa-clock"></i><h3>0</h3><p>Hours</p></div>
+            <div class="stat-box"><i class="fa-solid fa-check-circle"></i><h3>0%</h3><p>Success</p></div>
+        </div>
+
+        <!-- Profile Form -->
+        <div class="form-section" id="formSection">
+            <h2>Complete Your Profile</h2>
+            
+            <div class="progress-wrap">
+                <div class="progress-fill" id="progressBar"></div>
+                <div class="progress-label" id="progressText">0%</div>
+            </div>
+
+            <form id="profileForm">
+                <!-- Step 1 -->
+                <div class="step active" id="step1">
+                    <h3>Step 1: Personal Info</h3>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="cgFullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="cgPhone" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>NIC Number *</label>
+                        <input type="text" id="cgNIC" placeholder="Enter NIC number" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step" id="step2">
+                    <h3>Step 2: Professional Details</h3>
+                    <div class="form-group">
+                        <label>Caregiver Category *</label>
+                        <select id="cgCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="babysitter">Babysitter</option>
+                            <option value="elderly_care">Elderly Caregiver</option>
+                            <option value="nanny">Nanny</option>
+                            <option value="special_needs">Special Needs Care</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Years of Experience</label>
+                        <input type="number" id="cgExperience" placeholder="Years" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Daily Rate ($)</label>
+                        <input type="number" id="cgRate" placeholder="Daily rate in USD" min="0">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(1)">← Back</button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step" id="step3">
+                    <h3>Step 3: About You</h3>
+                    <div class="form-group">
+                        <label>About Yourself *</label>
+                        <textarea id="cgAbout" rows="4" placeholder="Write a brief introduction about yourself" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Skills & Certifications</label>
+                        <textarea id="cgSkills" rows="3" placeholder="List your skills and certifications"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload CV *</label>
+                        <input type="file" id="cgCV" accept=".pdf,.doc,.docx" required>
+                        <small>Supported: PDF, DOC, DOCX</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">← Back</button>
+                        <button type="submit" class="btn-submit" id="submitBtn">Submit Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+    <script src="caregiver.js"></script>
+</body>
+</html>

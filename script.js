@@ -113,3 +113,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+document.getElementById('feedback-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('fb-btn');
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    // Get input values from form
+    const params = {
+        from_name: document.getElementById('fb-name').value,
+        from_email: document.getElementById('fb-email').value,
+        message: document.getElementById('fb-message').value
+    };
+
+    // Send email using EmailJS
+    // Replace "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your actual EmailJS IDs
+    emailjs.send("service_no323dq", "template_4u99enm", params)
+        .then(() => {
+            alert("Thank you! Your feedback has been sent successfully.");
+            document.getElementById('feedback-form').reset();
+            submitBtn.innerText = "SUBMIT";
+            submitBtn.disabled = false;
+        })
+        .catch((error) => {
+            console.error("Email Error:", error);
+            alert("Failed to send message. Please try again later.");
+            submitBtn.innerText = "SUBMIT";
+            submitBtn.disabled = false;
+        });
+});

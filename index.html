@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Find A Servant for your family member!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png"sizes="96x96" href="logo.png">
 </head>
 
 <body>
@@ -233,12 +234,12 @@
 
                 <div class="contact-form-box">
                     <h3>Direct Message</h3>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Enter Your Name" required>
-                        <input type="email" placeholder="Enter Your Email Address" required>
-                        <textarea placeholder="Type Your Message" required></textarea>
-                        <button type="submit" class="btn-submit">SUBMIT</button>
-                    </form>
+<form class="contact-form" id="feedback-form">
+    <input type="text" id="fb-name" placeholder="Enter Your Name" required>
+    <input type="email" id="fb-email" placeholder="Enter Your Email Address" required>
+    <textarea id="fb-message" placeholder="Type Your Message" required></textarea>
+    <button type="submit" class="btn-submit" id="fb-btn">SUBMIT</button>
+</form>
                 </div>
             </div>
         </section>
@@ -284,6 +285,13 @@ menuToggle.addEventListener('click', () => {
     }
 });
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // මෙතැනට ඔබේ EmailJS Public Key එක දාන්න
+      emailjs.init("6t-mwdq4fTtE2WKOD");
+   })();
+</script>
 </body>
 
 </html>

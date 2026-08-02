@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus - Customer Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Simple Top Bar -->
+        <div class="top-bar">
+            <div class="brand"><i class="fa-solid fa-crown"></i> Zeus</div>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+
+        <!-- Customer Profile -->
+        <div class="customer-header">
+            <div class="customer-profile">
+                <div class="profile-img-wrap" onclick="document.getElementById('custProfileUpload').click()">
+                    <img id="custProfileImage" src="https://ui-avatars.com/api/?name=Customer&background=random" alt="Profile">
+                    <div class="upload-hint"><i class="fa-solid fa-camera"></i> Upload</div>
+                    <input type="file" id="custProfileUpload" accept="image/*" style="display:none">
+                </div>
+                <div>
+                    <h2 id="custName">Customer</h2>
+                    <p id="custEmail">email@example.com</p>
+                    <button class="edit-btn" onclick="toggleEditModal()"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Modal -->
+        <div class="modal" id="editModal" style="display:none">
+            <div class="modal-content">
+                <span class="close" onclick="toggleEditModal()">&times;</span>
+                <h3>Edit Profile</h3>
+                <form id="editForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="editName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="editPhone">
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" id="editAddress">
+                    </div>
+                    <div class="form-group">
+                        <label>About Me</label>
+                        <textarea id="editAbout" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Category Select -->
+        <div class="category-section">
+            <h3>Choose Caregiver Category</h3>
+            <div class="category-grid">
+                <div class="cat-card" onclick="loadCaregivers('babysitter')">
+                    <i class="fa-solid fa-child"></i><h4>Babysitter</h4>
+                </div>
+                <div class="cat-card" onclick="loadCaregivers('elderly_care')">
+                    <i class="fa-solid fa-person-cane"></i><h4>Elderly Care</h4>
+                </div>
+                <div class="cat-card" onclick="loadCaregivers('nanny')">
+                    <i class="fa-solid fa-house-chimney"></i><h4>Nanny</h4>
+                </div>
+                <div class="cat-card" onclick="loadCaregivers('special_needs')">
+                    <i class="fa-solid fa-hand-holding-heart"></i><h4>Special Needs</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caregiver List -->
+        <div class="list-section">
+            <h3>Available Caregivers</h3>
+            <div id="caregiverGrid" class="caregiver-grid"></div>
+        </div>
+    </div>
+
+    <!-- Caregiver Detail Modal -->
+    <div class="modal" id="detailModal" style="display:none">
+        <div class="modal-content detail-content">
+            <span class="close" onclick="closeDetail()">&times;</span>
+            <div id="detailBody"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+    <script src="customer.js"></script>
+</body>
+</html>
